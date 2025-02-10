@@ -1,44 +1,80 @@
 body {
-    font-family: Arial, sans-serif;
-    background: url('basketball-background.jpg') no-repeat center center fixed;
+    font-family: 'Roboto', sans-serif;
+    background: url('basketball-court.jpg') no-repeat center center fixed;
     background-size: cover;
     color: #fff;
     margin: 0;
     padding: 0;
+    animation: fadeIn 2s ease-in-out;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
 }
 
 header {
-    background: rgba(0, 0, 0, 0.7);
+    background: rgba(0, 0, 0, 0.8);
     padding: 20px;
     text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
 header h1 {
     margin: 0;
-    font-size: 2.5em;
+    font-size: 3em;
+    font-family: 'Staatliches', cursive;
     color: #ffcc00;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    animation: slideIn 1s ease-out;
+}
+
+@keyframes slideIn {
+    from { transform: translateY(-50px); opacity: 0; }
+    to { transform: translateY(0); opacity: 1; }
 }
 
 nav ul {
     list-style: none;
     padding: 0;
-    margin: 0;
+    margin: 20px 0 0 0;
+    display: flex;
+    justify-content: center;
+    animation: fadeIn 2s ease-in-out;
 }
 
 nav ul li {
-    display: inline;
-    margin: 0 10px;
+    margin: 0 15px;
 }
 
 nav ul li a {
     color: #ffcc00;
     text-decoration: none;
     font-weight: bold;
+    font-size: 1.2em;
+    position: relative;
+}
+
+nav ul li a::after {
+    content: '';
+    display: block;
+    width: 0;
+    height: 3px;
+    background: #ffcc00;
+    transition: width 0.3s;
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+}
+
+nav ul li a:hover::after {
+    width: 100%;
 }
 
 main {
     padding: 20px;
-    background: rgba(0, 0, 0, 0.7);
+    background: rgba(0, 0, 0, 0.8);
+    animation: fadeIn 2s ease-in-out;
 }
 
 section {
@@ -46,9 +82,50 @@ section {
 }
 
 section h2 {
-    font-size: 2em;
-    margin-bottom: 10px;
+    font-size: 2.5em;
+    margin-bottom: 20px;
+    font-family: 'Staatliches', cursive;
     color: #ffcc00;
+    text-align: center;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    animation: slideIn 1s ease-out;
+}
+
+section p {
+    text-align: center;
+    font-size: 1.2em;
+    margin-bottom: 20px;
+    animation: fadeIn 2s ease-in-out;
+}
+
+.content {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+section ul {
+    list-style: none;
+    padding: 0;
+    font-size: 1.1em;
+    width: 48%;
+    animation: fadeIn 2s ease-in-out;
+}
+
+section ul li {
+    background: rgba(255, 204, 0, 0.2);
+    margin: 10px 0;
+    padding: 10px;
+    border-left: 5px solid #ffcc00;
+    border-radius: 5px;
+}
+
+.video {
+    width: 48%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    animation: fadeIn 2s ease-in-out;
 }
 
 .play {
@@ -60,12 +137,17 @@ section h2 {
     height: auto;
     border: 2px solid #ffcc00;
     border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+    animation: fadeIn 2s ease-in-out;
 }
 
 footer {
     text-align: center;
     padding: 20px;
-    background: rgba(0, 0, 0, 0.7);
+    background: rgba(0, 0, 0, 0.8);
+    position: relative;
+    bottom: 0;
+    width: 100%;
 }
 
 footer p {
@@ -75,28 +157,4 @@ footer p {
 .credit {
     font-size: 0.8em;
     color: #ffcc00;
-}
-
-fieldset {
-    border: 1px solid #ffcc00;
-    padding: 10px;
-    margin-bottom: 15px;
-}
-
-legend {
-    color: #ffcc00;
-    font-weight: bold;
-}
-
-button {
-    background-color: #ffcc00;
-    color: #000;
-    padding: 10px 20px;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-}
-
-button:hover {
-    background-color: #e6b800;
 }
