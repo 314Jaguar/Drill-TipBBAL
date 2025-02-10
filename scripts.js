@@ -1,49 +1,266 @@
-document.addEventListener('DOMContentLoaded', () => {
-    // Smooth scrolling for navigation links
-    const navLinks = document.querySelectorAll('nav ul li a');
-    navLinks.forEach(link => {
-        link.addEventListener('click', (e) => {
-            e.preventDefault();
-            document.querySelector(link.getAttribute('href')).scrollIntoView({
-                behavior: 'smooth'
-            });
-        });
-    });
+body {
+    font-family: 'Roboto', sans-serif;
+    background: url('basketball-court.jpg') no-repeat center center fixed;
+    background-size: cover;
+    color: #fff;
+    margin: 0;
+    padding: 0;
+    animation: fadeIn 2s ease-in-out;
+}
 
-    // Back to top button
-    const backToTopButton = document.createElement('button');
-    backToTopButton.innerHTML = '<i class="fas fa-arrow-up"></i>';
-    backToTopButton.classList.add('back-to-top');
-    document.body.appendChild(backToTopButton);
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
 
-    backToTopButton.addEventListener('click', () => {
-        window.scrollTo({
-            top: 0,
-            behavior: 'smooth'
-        });
-    });
+header {
+    background: rgba(0, 0, 0, 0.8);
+    padding: 20px;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    position: relative;
+}
 
-    window.addEventListener('scroll', () => {
-        if (window.scrollY > 300) {
-            backToTopButton.style.display = 'block';
-        } else {
-            backToTopButton.style.display = 'none';
-        }
-    });
+header .visitor-counter {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background: rgba(255, 204, 0, 0.8);
+    padding: 5px 10px;
+    border-radius: 5px;
+    font-size: 1em;
+    color: #000;
+}
 
-    // Responsive navigation menu
-    const nav = document.querySelector('nav');
-    const toggleMenu = document.querySelector('.toggle-menu');
+header h1 {
+    margin: 0;
+    font-size: 3em;
+    font-family: 'Staatliches', cursive;
+    color: #ffcc00;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    animation: slideIn 1s ease-out;
+}
 
-    toggleMenu.addEventListener('click', () => {
-        nav.classList.toggle('active');
-    });
+@keyframes slideIn {
+    from { transform: translateY(-50px); opacity: 0; }
+    to { transform: translateY(0); opacity: 1; }
+}
 
-    // Close menu on link click
-    navLinks.forEach(link => {
-        link.addEventListener('click', () => {
-            nav.classList.remove('active');
-        });
-    });
+nav {
+    position: relative;
+}
 
-    // Visitor counter
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 20px 0 0 0;
+    display: flex;
+    justify-content: center;
+    animation: fadeIn 2s ease-in-out;
+}
+
+nav ul li {
+    margin: 0 15px;
+}
+
+nav ul li a {
+    color: #ffcc00;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 1.2em;
+    position: relative;
+}
+
+nav ul li a::after {
+    content: '';
+    display: block;
+    width: 0;
+    height: 3px;
+    background: #ffcc00;
+    transition: width 0.3s;
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+}
+
+nav ul li a:hover::after {
+    width: 100%;
+}
+
+.toggle-menu {
+    display: none;
+    background: none;
+    border: none;
+    color: #ffcc00;
+    font-size: 2em;
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    right: 20px;
+}
+
+main {
+    padding: 20px;
+    background: rgba(0, 0, 0, 0.8);
+    animation: fadeIn 2s ease-in-out;
+}
+
+section {
+    margin-bottom: 40px;
+}
+
+section h2 {
+    font-size: 2.5em;
+    margin-bottom: 20px;
+    font-family: 'Staatliches', cursive;
+    color: #ffcc00;
+    text-align: center;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    animation: slideIn 1s ease-out;
+}
+
+section p {
+    text-align: center;
+    font-size: 1.2em;
+    margin-bottom: 20px;
+    animation: fadeIn 2s ease-in-out;
+}
+
+.content {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.court-container {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+#tip-container {
+    background: rgba(255, 204, 0, 0.8);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+    text-align: center;
+}
+
+#tip-container h3 {
+    margin-top: 0;
+}
+
+section ul {
+    list-style: none;
+    padding: 0;
+    font-size: 1.1em;
+    width: 48%;
+    animation: fadeIn 2s ease-in-out;
+}
+
+section ul li {
+    background: rgba(255, 204, 0, 0.2);
+    margin: 10px 0;
+    padding: 10px;
+    border-left: 5px solid #ffcc00;
+    border-radius: 5px;
+}
+
+.activity {
+    width: 48%;
+    background: rgba(255, 204, 0, 0.2);
+    margin: 10px 0;
+    padding: 10px;
+    border-left: 5px solid #ffcc00;
+    border-radius: 5px;
+    animation: fadeIn 2s ease-in-out;
+}
+
+.activity h3 {
+    margin-top: 0;
+}
+
+.play {
+    margin-bottom: 20px;
+}
+
+.play img {
+    width: 100%;
+    height: auto;
+    border: 2px solid #ffcc00;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+    animation: fadeIn 2s ease-in-out;
+}
+
+.video {
+    width: 48%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    animation: fadeIn 2s ease-in-out;
+}
+
+.back-to-top {
+    display: none;
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    background: #ffcc00;
+    border: none;
+    padding: 10px;
+    border-radius: 50%;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    cursor: pointer;
+}
+
+.back-to-top i {
+    color: #000;
+    font-size: 1.5em;
+}
+
+@media (max-width: 768px) {
+    nav ul {
+        display: none;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    nav ul li {
+        margin: 10px 0;
+    }
+
+    nav.active ul {
+        display: flex;
+    }
+
+    .toggle-menu {
+        display: block;
+    }
+
+    .content {
+        flex-direction: column;
+    }
+
+    section ul, .activity, .video {
+        width: 100%;
+    }
+}
+
+footer {
+    text-align: center;
+    padding: 20px;
+    background: rgba(0, 0, 0, 0.8);
+    position: relative;
+    bottom: 0;
+    width: 100%;
+}
+
+footer p {
+    margin: 5px 0;
+}
+
+.credit {
+    font-size: 0.8em;
+    color: #ffcc00;
+}
