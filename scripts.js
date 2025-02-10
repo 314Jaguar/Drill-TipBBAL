@@ -45,23 +45,4 @@ document.addEventListener('DOMContentLoaded', () => {
             nav.classList.remove('active');
         });
     });
-
-    // Intersection Observer for lazy loading videos
-    const videos = document.querySelectorAll('iframe');
-    const videoObserver = new IntersectionObserver((entries, observer) => {
-        entries.forEach(entry => {
-            if (entry.isIntersecting) {
-                entry.target.src = entry.target.dataset.src;
-                observer.unobserve(entry.target);
-            }
-        });
-    }, {
-        rootMargin: '0px 0px 200px 0px'
-    });
-
-    videos.forEach(video => {
-        video.dataset.src = video.src;
-        video.src = '';
-        videoObserver.observe(video);
-    });
 });
