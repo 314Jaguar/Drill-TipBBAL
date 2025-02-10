@@ -25,9 +25,7 @@
                 <li><a href="#plays">Plays</a></li>
                 <li><a href="#games">Games</a></li>
                 <li><a href="#challenges">Challenges</a></li>
-                <li><a href="#leaderboard">Leaderboard</a></li>
                 <li><a href="#court">Interactive Court</a></li>
-                <li><a href="#login">Login</a></li>
             </ul>
         </nav>
     </header>
@@ -206,62 +204,11 @@
                 </div>
             </div>
         </section>
-        <section id="leaderboard">
-            <h2>Leaderboard</h2>
-            <p>Check out the top performers in various challenges:</p>
-            <div class="content">
-                <div class="leaderboard-table">
-                    <h3>Free Throw Challenge</h3>
-                    <table>
-                        <thead>
-                            <tr>
-                                <th>Rank</th>
-                                <th>Name</th>
-                                <th>Score</th>
-                            </tr>
-                        </thead>
-                        <tbody id="free-throw-leaderboard">
-                            <!-- Leaderboard entries will be populated here -->
-                        </tbody>
-                    </table>
-                </div>
-                <div class="leaderboard-table">
-                    <h3>3-Point Challenge</h3>
-                    <table>
-                        <thead>
-                            <tr>
-                                <th>Rank</th>
-                                <th>Name</th>
-                                <th>Score</th>
-                            </tr>
-                        </thead>
-                        <tbody id="three-point-leaderboard">
-                            <!-- Leaderboard entries will be populated here -->
-                        </tbody>
-                    </table>
-                </div>
-                <div class="leaderboard-table">
-                    <h3>Dribbling Challenge</h3>
-                    <table>
-                        <thead>
-                            <tr>
-                                <th>Rank</th>
-                                <th>Name</th>
-                                <th>Score</th>
-                            </tr>
-                        </thead>
-                        <tbody id="dribbling-leaderboard">
-                            <!-- Leaderboard entries will be populated here -->
-                        </tbody>
-                    </table>
-                </div>
-            </div>
-        </section>
         <section id="court">
             <h2>Interactive Court</h2>
             <p>Click on different areas of the basketball court to get tips and drills:</p>
             <div class="court-container">
-                <img src="basketball-court-diagram.png" alt="Basketball Court Diagram" usemap="#courtmap">
+                <img src="https://ih1.redbubble.net/image.1992809330.4637/flat,750x,075,f-pad,750x1000,f8f8f8.jpg" alt="Basketball Court Diagram" usemap="#courtmap">
                 <map name="courtmap">
                     <area shape="rect" coords="50,50,150,150" alt="3-Point Line" href="#" data-tip="3-Point Line Tips" onclick="showTip(event, '3-point')">
                     <area shape="rect" coords="200,50,300,150" alt="Free Throw Line" href="#" data-tip="Free Throw Line Tips" onclick="showTip(event, 'free-throw')">
@@ -272,16 +219,6 @@
             <div id="tip-container">
                 <h3>Tips</h3>
                 <p id="tip-text">Click on an area of the court to see tips.</p>
-            </div>
-        </section>
-        <section id="login">
-            <h2>Login</h2>
-            <p>Login to save your scores and participate in challenges:</p>
-            <div class="login-container">
-                <input type="email" id="email" placeholder="Email">
-                <input type="password" id="password" placeholder="Password">
-                <button id="login-button">Login</button>
-                <button id="signup-button">Sign Up</button>
             </div>
         </section>
     </main>
