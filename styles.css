@@ -145,6 +145,17 @@ section ul li {
     animation: fadeIn 2s ease-in-out;
 }
 
+.video a {
+    color: #ffcc00;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 1.2em;
+}
+
+.video a:hover {
+    text-decoration: underline;
+}
+
 .play {
     margin-bottom: 20px;
 }
