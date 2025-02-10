@@ -14,6 +14,7 @@
     <header>
         <div class="visitor-counter">
             <i class="fas fa-users"></i> <span id="visitor-count">0</span> Visitors
+            <button id="all-time-viewers-btn">All Time Viewership</button>
         </div>
         <h1>Basketball Tips & Drills</h1>
         <nav>
@@ -25,7 +26,6 @@
                 <li><a href="#plays">Plays</a></li>
                 <li><a href="#games">Games</a></li>
                 <li><a href="#challenges">Challenges</a></li>
-                <li><a href="#court">Interactive Court</a></li>
             </ul>
         </nav>
     </header>
@@ -202,23 +202,6 @@
                     <h3>Dribbling Challenge</h3>
                     <p>Create a dribbling obstacle course and see who can complete it the fastest without losing control of the ball.</p>
                 </div>
-            </div>
-        </section>
-        <section id="court">
-            <h2>Interactive Court</h2>
-            <p>Click on different areas of the basketball court to get tips and drills:</p>
-            <div class="court-container">
-                <img src="https://ih1.redbubble.net/image.1992809330.4637/flat,750x,075,f-pad,750x1000,f8f8f8.jpg" alt="Basketball Court Diagram" usemap="#courtmap">
-                <map name="courtmap">
-                    <area shape="rect" coords="50,50,150,150" alt="3-Point Line" href="#" data-tip="3-Point Line Tips" onclick="showTip(event, '3-point')">
-                    <area shape="rect" coords="200,50,300,150" alt="Free Throw Line" href="#" data-tip="Free Throw Line Tips" onclick="showTip(event, 'free-throw')">
-                    <area shape="rect" coords="50,200,150,300" alt="Defensive Area" href="#" data-tip="Defensive Tips" onclick="showTip(event, 'defense')">
-                    <area shape="rect" coords="200,200,300,300" alt="Layup Area" href="#" data-tip="Layup Tips" onclick="showTip(event, 'layup')">
-                </map>
-            </div>
-            <div id="tip-container">
-                <h3>Tips</h3>
-                <p id="tip-text">Click on an area of the court to see tips.</p>
             </div>
         </section>
     </main>
