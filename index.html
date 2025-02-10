@@ -11,6 +11,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Staatliches&display=swap" rel="stylesheet">
     <script src="https://www.gstatic.com/firebasejs/9.0.0/firebase-app.js"></script>
     <script src="https://www.gstatic.com/firebasejs/9.0.0/firebase-database.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.0.0/firebase-auth.js"></script>
 </head>
 <body>
     <header>
@@ -27,6 +28,7 @@
                 <li><a href="#plays">Plays</a></li>
                 <li><a href="#games">Games</a></li>
                 <li><a href="#challenges">Challenges</a></li>
+                <li><a href="#leaderboard">Leaderboard</a></li>
             </ul>
         </nav>
     </header>
@@ -202,6 +204,57 @@
                 <div class="activity">
                     <h3>Dribbling Challenge</h3>
                     <p>Create a dribbling obstacle course and see who can complete it the fastest without losing control of the ball.</p>
+                </div>
+            </div>
+        </section>
+        <section id="leaderboard">
+            <h2>Leaderboard</h2>
+            <p>Check out the top performers in various challenges:</p>
+            <div class="content">
+                <div class="leaderboard-table">
+                    <h3>Free Throw Challenge</h3>
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Rank</th>
+                                <th>Name</th>
+                                <th>Score</th>
+                            </tr>
+                        </thead>
+                        <tbody id="free-throw-leaderboard">
+                            <!-- Leaderboard entries will be populated here -->
+                        </tbody>
+                    </table>
+                </div>
+                <div class="leaderboard-table">
+                    <h3>3-Point Challenge</h3>
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Rank</th>
+                                <th>Name</th>
+                                <th>Score</th>
+                            </tr>
+                        </thead>
+                        <tbody id="three-point-leaderboard">
+                            <!-- Leaderboard entries will be populated here -->
+                        </tbody>
+                    </table>
+                </div>
+                <div class="leaderboard-table">
+                    <h3>Dribbling Challenge</h3>
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Rank</th>
+                                <th>Name</th>
+                                <th>Score</th>
+                            </tr>
+                        </thead>
+                        <tbody id="dribbling-leaderboard">
+                            <!-- Leaderboard entries will be populated here -->
+                        </tbody>
+                    </table>
                 </div>
             </div>
         </section>
