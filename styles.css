@@ -200,20 +200,4 @@ section ul li {
     position: fixed;
     bottom: 30px;
     right: 30px;
-    background: #ffcc00;
-    border: none;
-    padding: 10px;
-    border-radius: 50%;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    cursor: pointer;
-}
-
-.back-to-top i {
-    color: #000;
-    font-size: 1.5em;
-}
-
-@media (max-width: 768px) {
-    nav ul {
-        display: none;
-        flex-direction: column;
+    background: #ff
