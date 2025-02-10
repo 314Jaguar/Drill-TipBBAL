@@ -32,6 +32,17 @@ header .visitor-counter {
     color: #000;
 }
 
+#all-time-viewers-btn {
+    display: block;
+    background-color: #ffcc00;
+    color: black;
+    border: none;
+    padding: 10px;
+    margin-top: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
 header h1 {
     margin: 0;
     font-size: 3em;
@@ -133,23 +144,6 @@ section p {
     justify-content: space-between;
 }
 
-.court-container {
-    text-align: center;
-    margin-bottom: 20px;
-}
-
-#tip-container {
-    background: rgba(255, 204, 0, 0.8);
-    padding: 20px;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
-    text-align: center;
-}
-
-#tip-container h3 {
-    margin-top: 0;
-}
-
 section ul {
     list-style: none;
     padding: 0;
@@ -160,4 +154,64 @@ section ul {
 
 section ul li {
     background: rgba(255, 204, 0, 0.2);
-   
+    margin: 10px 0;
+    padding: 10px;
+    border-left: 5px solid #ffcc00;
+    border-radius: 5px;
+}
+
+.activity {
+    width: 48%;
+    background: rgba(255, 204, 0, 0.2);
+    margin: 10px 0;
+    padding: 10px;
+    border-left: 5px solid #ffcc00;
+    border-radius: 5px;
+    animation: fadeIn 2s ease-in-out;
+}
+
+.activity h3 {
+    margin-top: 0;
+}
+
+.play {
+    margin-bottom: 20px;
+}
+
+.play img {
+    width: 100%;
+    height: auto;
+    border: 2px solid #ffcc00;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+    animation: fadeIn 2s ease-in-out;
+}
+
+.video {
+    width: 48%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    animation: fadeIn 2s ease-in-out;
+}
+
+.back-to-top {
+    display: none;
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    background: #ffcc00;
+    border: none;
+    padding: 10px;
+    border-radius: 50%;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    cursor: pointer;
+}
+
+.back-to-top i {
+    color: #000;
+    font-size: 1.5em;
+}
+
+@media (max-width: 768px) {
+    nav ul {
