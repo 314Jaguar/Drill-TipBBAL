@@ -29,6 +29,8 @@
                 <li><a href="#games">Games</a></li>
                 <li><a href="#challenges">Challenges</a></li>
                 <li><a href="#leaderboard">Leaderboard</a></li>
+                <li><a href="#court">Interactive Court</a></li>
+                <li><a href="#login">Login</a></li>
             </ul>
         </nav>
     </header>
@@ -256,6 +258,29 @@
                         </tbody>
                     </table>
                 </div>
+            </div>
+        </section>
+        <section id="court">
+            <h2>Interactive Court</h2>
+            <p>Click on different areas of the basketball court to get tips and drills:</p>
+            <div class="court-container">
+                <img src="basketball-court-diagram.png" alt="Basketball Court Diagram" usemap="#courtmap">
+                <map name="courtmap">
+                    <area shape="rect" coords="50,50,150,150" alt="3-Point Line" href="#shooting" title="3-Point Line Tips">
+                    <area shape="rect" coords="200,50,300,150" alt="Free Throw Line" href="#shooting" title="Free Throw Line Tips">
+                    <area shape="rect" coords="50,200,150,300" alt="Defensive Area" href="#defense" title="Defensive Tips">
+                    <area shape="rect" coords="200,200,300,300" alt="Layup Area" href="#plays" title="Layup Tips">
+                </map>
+            </div>
+        </section>
+        <section id="login">
+            <h2>Login</h2>
+            <p>Login to save your scores and participate in challenges:</p>
+            <div class="login-container">
+                <input type="email" id="email" placeholder="Email">
+                <input type="password" id="password" placeholder="Password">
+                <button id="login-button">Login</button>
+                <button id="signup-button">Sign Up</button>
             </div>
         </section>
     </main>
